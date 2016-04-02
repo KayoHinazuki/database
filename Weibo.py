@@ -1,6 +1,7 @@
 from sqlalchemy import *
 from sqlalchemy.types import *
 from sqlalchemy.ext.declarative import declarative_base
+import time
 
 class Weibo(declarative_base()):
     
@@ -12,7 +13,7 @@ class Weibo(declarative_base()):
     weibo_id = Column(Integer)
     url = Column(String)
     images=Column(Text)
-    time = Column(TIMESTAMP(timezone=True))
+    time = Column(TIMESTAMP(timezone=True),default=time.time())
 
     def __repr__(self):
         return "%s(%r,%r,%r,%r,%r%r%r)" % (self.__tablename__,self.id,self.weibo,self.user_id,self.weibo_id,self.url,self.images,self.time)

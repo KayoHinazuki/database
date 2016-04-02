@@ -4,7 +4,6 @@ except Exception, e:
 	raise e
 
 def get_config(path):
-
 	with open(path) as f:
 		content = f.read()
 		return json.loads(content)

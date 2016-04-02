@@ -10,7 +10,8 @@ using mysql and sqlalchemy to store data to database
 * `weibo_id`(char255)
 * `url`(text)
 * `images`(text)(urls)
-* `time`
+* `record_time`
+* `send_time`
 
 #### [object] comment
 
@@ -23,7 +24,7 @@ using mysql and sqlalchemy to store data to database
 
 ### [object] user
 * id
-* atavar
+* avatar
 * user_id
 * nickname
 * is_fellow

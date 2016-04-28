@@ -1,34 +1,51 @@
 # database
 
-using mysql and sqlalchemy to store data to database
+```
+assets/
+    users/
+        id_name/
+            avatar_timestamp.png
 
-#### [object] weibo
+guinsoo: //用户
+    id:string
+    nick_name:string
+    avatar: string
+    is_fellow:
+    is_friend:
+    gender:
+    location:
+    description:
+    fellowing:[id] // 关注的人
+    fellowers:[id] //粉丝
+    numberof: // 微博数
+    time_to_recode:
 
-* `id`(int) id,pk,auto_increment
-* `weibo`(text) limited 140 words
-* `user_id`(int) weibo_id
-* `weibo_id`(char255)
-* `url`(text)
-* `images`(text)(urls)
-* `record_time`
-* `send_time`
+assets/
+    weibo/
+        id_name/
+            [image_1-9].png
 
-#### [object] comment
 
-* `int` id
-* `text` comment_content
-* `weibo_id` id
-* `user_id`
-* `time` comment time
-* `image`(supporting image in commit)
+daedalus // weibo
+id : (‘string’)
+content:(string) 
+is_retweet:(boolean)
+images:(url)
+device: //设备
+prev_id:id
+post_time: //发微博的时间
+star_number:
+comment:[comment_id]
+retweet:[userid]
+time_to_recode:timestamp
 
-### [object] user
-* id
-* avatar
-* user_id
-* nickname
-* is_fellow
-* is_friend
-* pv
-* time_to_fellow
-* time_to_know
+comment：//weibo
+    id：
+    content:
+    post_time：
+    time_to_record:
+    star_number:
+    user_id:
+    weibo_id:
+
+```
